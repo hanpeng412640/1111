@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span> <i class="icon iconfont icon-angle-left"></i></span>
+            <span>无连接</span>
+            <span> <i class="icon iconfont icon-shouqi-01"></i> <em><i class="icon iconfont icon-gongzuojilu"></i></em></span>
+        </header>
+        <section>
+            <div class="nav">
+                <dl class='active'>
+                    <dt><i class="icon iconfont icon-tuichu"></i></dt>
+                    <dd>电源</dd>
+                </dl>
+                <dl>
+                    <dt><i class="icon iconfont icon-shouye"></i></dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt><i class="icon iconfont icon-shouqi-01"></i></dt>
+                    <dd>菜单</dd>
+                </dl>
+                <dl>
+                    <dt><i class="icon iconfont icon-youxiang"></i></dt>
+                    <dd>截屏</dd>
+                </dl>
+            </div>
+            <div class="box">
+                <ul>
+                    <li class='show'>滑动控制上下左右,点击确定长按调节电视音量</li>
+                    <li>11</li>
+                    <li>22</li>
+                    <li>33</li>
+                </ul>
+            </div>
+            <div class="add">
+                <span><i class="icon iconfont icon-gongzuo"></i></span>
+                <button><i class="icon iconfont icon-fenxiang2"></i></button>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    $('.nav').on('click', 'dl', function() {
+        var index = $(this).index();
+        $('.box>ul>li').eq(index).show().siblings().hide();
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
+
+</html>
