@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button id='btn'>点击</button>
+    <div></div>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $('#btn').on('click', function() {
+        var str = $('input').val();
+
+        function names(str) {
+            var dh = str.replace(/\d{4}$/, '****');
+            strs = dh.substr(10, 4);
+            var newstr = '<b>' + strs + '</b>'
+            var content = dh.replace(dh.substr(10, 4), newstr)
+            $('div').html(content)
+
+        }
+        names(str)
+    })
+</script>
+
+</html>
